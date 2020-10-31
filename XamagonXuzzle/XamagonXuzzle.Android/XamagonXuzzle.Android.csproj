@@ -209,7 +209,12 @@
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
-  <Import Project="..\XamagonXuzzle\XamagonXuzzle.projitems" Label="Shared" Condition="Exists('..\XamagonXuzzle\XamagonXuzzle.projitems')" />
+  <ItemGroup>
+    <ProjectReference Include="..\XamagonXuzzle\XamagonXuzzle.csproj">
+      <Project>{b4b707e6-0891-49c6-9b26-1159f1bd9d7c}</Project>
+      <Name>XamagonXuzzle</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Android.Support.Annotations.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\..\packages\Xamarin.Android.Support.Annotations.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Annotations.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
