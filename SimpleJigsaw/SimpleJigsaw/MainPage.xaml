@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:SimpleJigsaw"
+             mc:Ignorable="d"
+             x:Class="SimpleJigsaw.MainPage">
+
+    <ContentView SizeChanged="OnContainerSizeChanged">
+        <StackLayout x:Name="stackLayout">
+
+            <Button Text="Randomize"
+                    Clicked="OnRandomizeButtonClicked"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand" />
+
+            <AbsoluteLayout x:Name="absoluteLayout"
+                            BackgroundColor="Black" />
+            <!--<Image x:Name="backgroundImage2" Source="{local:EmbeddedImage ResourceId=SimpleJigsaw.Images.row-1-col-1.jpg }" AbsoluteLayout.LayoutBounds="0,0,1,1"   AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill"/>-->
+
+            <!-- Balance out layout with invisible button. -->
+            <Button Text="Randomize"
+                    Opacity="0"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentView>
+
+</ContentPage>
