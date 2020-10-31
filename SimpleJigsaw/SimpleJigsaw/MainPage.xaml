@@ -23,19 +23,14 @@
                     Opacity="0"
                     HorizontalOptions="CenterAndExpand"
                     VerticalOptions="CenterAndExpand" />
-            <Grid Margin="10" x:Name="gridLayout">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+            <Grid IsClippedToBounds="False">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <local:AdControlView Grid.Row="0"/>
-                <Button Text="Randomize"
-                    Opacity="0"
-                    HorizontalOptions="CenterAndExpand"
-                    VerticalOptions="CenterAndExpand" />
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <local:AdControlView x:Name="adControlView" Grid.Row="0"/>
             </Grid>
         </StackLayout>
     </ContentView>
