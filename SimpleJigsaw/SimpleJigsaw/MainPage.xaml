@@ -23,6 +23,20 @@
                     Opacity="0"
                     HorizontalOptions="CenterAndExpand"
                     VerticalOptions="CenterAndExpand" />
+            <Grid Margin="10" x:Name="gridLayout">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <local:AdControlView Grid.Row="0"/>
+                <Button Text="Randomize"
+                    Opacity="0"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand" />
+            </Grid>
         </StackLayout>
     </ContentView>
 
